@@ -11,7 +11,6 @@ export function CourseSections ({sections}) {
           </li>
         ))
       }
-      <li>Lorem dolor amet sit </li>
     </ol>
   )
 }
