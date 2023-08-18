@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: "Space Mono", Consolas, Menlo, Monaco, "Courier New";
+  text-wrap: balance;
 }
 
 body{
@@ -18,25 +19,26 @@ body{
 
 h1 {
   margin: 30px 0 0 0;
-  color: #f08d38;
-  font-size:6rem;
-  font-weight: 900;
-  font-family: 'Bricolage Grotesque', sans-serif;
+  color: #0f5a6e;
+  font-size:3.5rem;
+  font-weight: 400;
+  font-family: 'Caprasimo', cursive;
 }
 
 
 h2 {
   margin: 0;
-  font-size: 3.5rem;
+  font-size: 2rem;
 }
+
 
 p {
   margin: 50px 0;
-  font-size: 20px;
+  font-size: 1.2rem;
 }
 
 .course-name {
-  font-size:  3.5rem;
+  font-size:  2.5rem;
   font-weight: 500;
   margin-bottom: 80px;
 }
@@ -47,12 +49,13 @@ p {
 }
 
 .list {
+  margin-top: 50px;
   padding: 0;
   text-align: left;
     list-style: none;
     width: 800px;
     max-width: 95%;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(30px);
 }
 
 .item {
@@ -99,7 +102,8 @@ p {
 .headline {
     padding: 0rem 0 0 0;
     margin: 0 0 1rem 0;
-    font: normal 2rem "Space Mono", Consolas, Menlo, Monaco, "Courier New", monospace;;
+    font: normal 1.2rem "Space Mono", Consolas, Menlo, Monaco, "Courier New", monospace;;
+    font-weight: 900;
 }
 
 
