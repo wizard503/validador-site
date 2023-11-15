@@ -1,4 +1,4 @@
-const ENDPOINT = "https://api-diplomas.vercel.app/diplomas/";
+const ENDPOINT = "https://api-diplomas-git-main-miltonmg.vercel.app/diplomas/";
 
 export const getDiploma = async (dui) => {
   try {
