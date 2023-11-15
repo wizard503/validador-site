@@ -1,13 +1,16 @@
-import { useEffect, useState } from "react";
-import { getDiploma } from "../services/diploma.js"
+const ENDPOINT = "https://api-diplomas.vercel.app/diplomas/";
 
-export function useDiploma({dui}) {
+export const getDiploma = async (dui) => {
+  try {
+    const res = await fetch(ENDPOINT + dui);
 
-  const [diploma, setDiploma] = useState();
+    // Muestra los encabezados de respuesta en la consola
+    console.log('Headers:', res.headers);
 
-  useEffect(() => {
-    getDiploma({dui}).then((newDiploma) => setDiploma(newDiploma));
-  }, []);
-
-  return diploma;
-}
+    const data = await res.json();
+    return data.diploma;
+  } catch (error) {
+    console.error('Error fetching diploma:', error);
+    throw error; // Propaga el error para que pueda ser manejado en el código que llama a esta función
+  }
+};
