@@ -7,7 +7,7 @@ export const getDiploma = async (dui) => {
     console.log('Headers:', res.headers);
 
     const data = await res.json();
-    return data.diploma;
+    return data;
   } catch (error) {
     console.error('Error fetching diploma:', error);
     throw error;
