@@ -1,25 +1,31 @@
-import { useLoaderData } from "react-router-dom";
-
-import { getDiploma } from "./services/diploma.js"
-import './App.css'
-import { CourseSections } from "./components/CourseSections.jsx"
-import { Header } from './components/Header'
-import { Info } from './components/Info'
+import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
+import './App.css'; // Import the custom styles
 
 
-export async function loader({ params }) {
-  return await getDiploma(params.dui);
-}
+const App = () => {
+  const [searchInput, setSearchInput] = useState('');
+  let navigate = useNavigate();
 
-function App() {
-  const diploma = useLoaderData();
+  const handleSearch = () => {
+    navigate(`/diploma/${searchInput}`, { replace: true });
+  };
+
   return (
-    <>
-      {diploma && <Header course={diploma.curso}/>}
-      {diploma && <Info name={diploma.nombre}/>}
-      {diploma && <CourseSections sections={diploma.unidades}/>}
-    </>
-  )
-}
+    <div className="container">
+      <h1>Validacion de Diplomas</h1>
+      <p>Ingresa el numero de tu carnet UES:</p>
 
-export default App
+      <input
+        type="text"
+        placeholder="Ingresa tu Carnet UES"
+        value={searchInput}
+        onChange={(e) => setSearchInput(e.target.value)}
+      />
+
+      <button onClick={handleSearch}>Buscar Diploma</button>
+    </div>
+  );
+};
+
+export default App;

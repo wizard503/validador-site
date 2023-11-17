@@ -5,15 +5,20 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import App, {
+import CertificateView, {
   loader as diplomaLoader,
-} from './App.jsx'
+} from './pages/CertificateView.jsx'
 import './index.css'
+import App from './App.jsx';
 
 const router = createBrowserRouter([
   {
-    path: "/diploma/:dui",
+    path: "/",
     element: <App/>,
+  },
+  {
+    path: "/diploma/:dui",
+    element: <CertificateView/>,
     loader: diplomaLoader,
   },
 ]);
