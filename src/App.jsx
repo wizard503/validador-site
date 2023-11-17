@@ -14,11 +14,11 @@ const App = () => {
   return (
     <div className="container">
       <h1>Validacion de Diplomas</h1>
-      <p>Ingresa el numero de tu carnet UES:</p>
+      <p>Ingresa el numero de tu DUI:</p>
 
       <input
         type="text"
-        placeholder="Ingresa tu Carnet UES"
+        placeholder="Ingresa tu numero de DUI"
         value={searchInput}
         onChange={(e) => setSearchInput(e.target.value)}
       />
